@@ -111,6 +111,7 @@ static const rcoption rcopts[] = {
 	{"locking", LOCKING},
 	{"matchbrackets", 0},
 	{"noconvert", NO_CONVERT},
+	{"nosearchwrap", NO_SEARCH_WRAP},
 	{"showcursor", SHOW_CURSOR},
 	{"smarthome", SMART_HOME},
 	{"smooth", SMOOTH_SCROLL},  /* Deprecated; remove in 2021. */

@@ -348,7 +348,8 @@ enum {
 	INDICATOR,
 	BOOKSTYLE,
 	STATEFLAGS,
-	USE_MAGIC
+	USE_MAGIC,
+	NO_SEARCH_WRAP
 };
 
 /* Structure types. */

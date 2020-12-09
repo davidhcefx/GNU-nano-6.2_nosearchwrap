@@ -243,7 +243,7 @@ int findnextstr(const char *needle, bool whole_word_only, int modus,
 		/* If we've reached the start or end of the buffer, wrap around;
 		 * but stop when spell-checking or replacing in a region. */
 		if (line == NULL) {
-			if (whole_word_only || modus == INREGION) {
+			if (whole_word_only || modus == INREGION || ISSET(NO_SEARCH_WRAP)) {
 				nodelay(edit, FALSE);
 				return 0;
 			}
