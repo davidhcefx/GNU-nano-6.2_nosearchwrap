@@ -658,6 +658,7 @@ void usage(void)
 #ifdef HAVE_LIBMAGIC
 	print_opt("-!", "--magic", N_("Also try magic to determine syntax"));
 #endif
+	print_opt("", "--nosearchwrap", N_("Don't wrap past EOF when search/replace"));
 }
 
 /* Display the version number of this nano, a copyright notice, some contact
@@ -1773,6 +1774,7 @@ int main(int argc, char **argv)
 #ifdef HAVE_LIBMAGIC
 		{"magic", 0, NULL, '!'},
 #endif
+		{"nosearchwrap", 0, NULL, '\x01'},
 		{NULL, 0, NULL, 0}
 	};
 
@@ -2064,6 +2066,9 @@ int main(int argc, char **argv)
 				SET(USE_MAGIC);
 				break;
 #endif
+			case '\x01':
+				SET(NO_SEARCH_WRAP);
+				break;
 			default:
 				printf(_("Type '%s -h' for a list of available options.\n"), argv[0]);
 				exit(1);
